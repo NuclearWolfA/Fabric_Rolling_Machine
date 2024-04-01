@@ -1,0 +1,31 @@
+Change Component Footprint: Designator=R1 Old Footprint=RES_AC01_VIS New Footprint=RES_AC01_VIS
+Change Component Footprint: Designator=R2 Old Footprint=RES_AC01_VIS New Footprint=RES_AC01_VIS
+Change Component Footprint: Designator=R3 Old Footprint=RES_AC01_VIS New Footprint=RES_AC01_VIS
+Change Component Footprint: Designator=R4 Old Footprint=RES_AC01_VIS New Footprint=RES_AC01_VIS
+Change Component Footprint: Designator=R5 Old Footprint=RES_AC01_VIS New Footprint=RES_AC01_VIS
+Change Component Footprint: Designator=R6 Old Footprint=RES_AC01_VIS New Footprint=RES_AC01_VIS
+Change Component Footprint: Designator=R7 Old Footprint=RES_AC01_VIS New Footprint=RES_AC01_VIS
+Added Pin To Net: NetName=NetC5_2 Pin=J2-1
+Added Pin To Net: NetName=VCC Pin=J2-4
+Added Pin To Net: NetName=GND Pin=J2-5
+Added Pin To Net: NetName=GND Pin=J2-6
+Add Pin To Net: Unknown Pin: Pin J3-GND
+Add Pin To Net: Unknown Pin: Pin J3-MISO
+Add Pin To Net: Unknown Pin: Pin J3-MOSI
+Add Pin To Net: Unknown Pin: Pin J3-RESET
+Add Pin To Net: Unknown Pin: Pin J3-SCK
+Add Pin To Net: Unknown Pin: Pin J3-VCC
+Add Pin To Net: Unknown Pin: Pin Motor_U_moterdriver1-A1
+Add Pin To Net: Unknown Pin: Pin Motor_U_moterdriver1-A2
+Add Pin To Net: Unknown Pin: Pin Motor_U_moterdriver1-B1
+Add Pin To Net: Unknown Pin: Pin Motor_U_moterdriver1-B2
+Add Pin To Net: Unknown Pin: Pin Motor_U_moterdriver2-A1
+Add Pin To Net: Unknown Pin: Pin Motor_U_moterdriver2-A2
+Add Pin To Net: Unknown Pin: Pin Motor_U_moterdriver2-B1
+Add Pin To Net: Unknown Pin: Pin Motor_U_moterdriver2-B2
+Added Pin To Net: NetName=NetJ2_2 Pin=J2-2
+Added Pin To Net: NetName=NetJ2_2 Pin=U3-3
+Added Net: Name=NetJ2_2
+Added Pin To Net: NetName=NetJ2_3 Pin=J2-3
+Added Pin To Net: NetName=NetJ2_3 Pin=U3-2
+Added Net: Name=NetJ2_3

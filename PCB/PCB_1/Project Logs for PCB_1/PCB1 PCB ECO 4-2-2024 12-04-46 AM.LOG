@@ -1,0 +1,36 @@
+Added Pin To Net: NetName=VCC Pin=J3-2
+Added Pin To Net: NetName=NetC5_1 Pin=J3-5
+Added Pin To Net: NetName=GND Pin=J3-6
+Added Pin To Net: NetName=NetJ3_1 Pin=J3-1
+Added Pin To Net: NetName=NetJ3_1 Pin=U3-22
+Added Net: Name=NetJ3_1
+Added Pin To Net: NetName=NetJ3_3 Pin=J3-3
+Added Pin To Net: NetName=NetJ3_3 Pin=U3-20
+Added Net: Name=NetJ3_3
+Added Pin To Net: NetName=NetJ3_4 Pin=J3-4
+Added Pin To Net: NetName=NetJ3_4 Pin=U3-21
+Added Net: Name=NetJ3_4
+Added Pin To Net: NetName=NetMotor_U_moterdriver1_1 Pin=Motor_U_moterdriver1-1
+Added Pin To Net: NetName=NetMotor_U_moterdriver1_1 Pin=U4_U_moterdriver1-12
+Added Net: Name=NetMotor_U_moterdriver1_1
+Added Pin To Net: NetName=NetMotor_U_moterdriver1_2 Pin=Motor_U_moterdriver1-2
+Added Pin To Net: NetName=NetMotor_U_moterdriver1_2 Pin=U4_U_moterdriver1-11
+Added Net: Name=NetMotor_U_moterdriver1_2
+Added Pin To Net: NetName=NetMotor_U_moterdriver1_3 Pin=Motor_U_moterdriver1-3
+Added Pin To Net: NetName=NetMotor_U_moterdriver1_3 Pin=U4_U_moterdriver1-13
+Added Net: Name=NetMotor_U_moterdriver1_3
+Added Pin To Net: NetName=NetMotor_U_moterdriver1_4 Pin=Motor_U_moterdriver1-4
+Added Pin To Net: NetName=NetMotor_U_moterdriver1_4 Pin=U4_U_moterdriver1-14
+Added Net: Name=NetMotor_U_moterdriver1_4
+Added Pin To Net: NetName=NetMotor_U_moterdriver2_1 Pin=Motor_U_moterdriver2-1
+Added Pin To Net: NetName=NetMotor_U_moterdriver2_1 Pin=U4_U_moterdriver2-12
+Added Net: Name=NetMotor_U_moterdriver2_1
+Added Pin To Net: NetName=NetMotor_U_moterdriver2_2 Pin=Motor_U_moterdriver2-2
+Added Pin To Net: NetName=NetMotor_U_moterdriver2_2 Pin=U4_U_moterdriver2-11
+Added Net: Name=NetMotor_U_moterdriver2_2
+Added Pin To Net: NetName=NetMotor_U_moterdriver2_3 Pin=Motor_U_moterdriver2-3
+Added Pin To Net: NetName=NetMotor_U_moterdriver2_3 Pin=U4_U_moterdriver2-13
+Added Net: Name=NetMotor_U_moterdriver2_3
+Added Pin To Net: NetName=NetMotor_U_moterdriver2_4 Pin=Motor_U_moterdriver2-4
+Added Pin To Net: NetName=NetMotor_U_moterdriver2_4 Pin=U4_U_moterdriver2-14
+Added Net: Name=NetMotor_U_moterdriver2_4

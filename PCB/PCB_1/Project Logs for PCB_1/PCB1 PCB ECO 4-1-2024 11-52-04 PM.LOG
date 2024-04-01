@@ -1,0 +1,25 @@
+Add Pin To Net: Unknown Pin: Pin J2-1 DTR
+Add Pin To Net: Unknown Pin: Pin J2-2 RX
+Add Pin To Net: Unknown Pin: Pin J2-3 TX
+Add Pin To Net: Unknown Pin: Pin J2-4 VCC
+Add Pin To Net: Unknown Pin: Pin J2-5 GND
+Add Pin To Net: Unknown Pin: Pin J2-6 GND
+Add Pin To Net: Unknown Pin: Pin J3-GND
+Add Pin To Net: Unknown Pin: Pin J3-MISO
+Add Pin To Net: Unknown Pin: Pin J3-MOSI
+Add Pin To Net: Unknown Pin: Pin J3-RESET
+Add Pin To Net: Unknown Pin: Pin J3-SCK
+Add Pin To Net: Unknown Pin: Pin J3-VCC
+Add Pin To Net: Unknown Pin: Pin Motor_U_moterdriver1-A1
+Add Pin To Net: Unknown Pin: Pin Motor_U_moterdriver1-A2
+Add Pin To Net: Unknown Pin: Pin Motor_U_moterdriver1-B1
+Add Pin To Net: Unknown Pin: Pin Motor_U_moterdriver1-B2
+Add Pin To Net: Unknown Pin: Pin Motor_U_moterdriver2-A1
+Add Pin To Net: Unknown Pin: Pin Motor_U_moterdriver2-A2
+Add Pin To Net: Unknown Pin: Pin Motor_U_moterdriver2-B1
+Add Pin To Net: Unknown Pin: Pin Motor_U_moterdriver2-B2
+Added Room: Name=U_atmel
+Added Room: Name=U_inputs
+Added Room: Name=U_moterdriver1
+Added Room: Name=U_moterdriver2
+Added Room: Name=U_power supply
