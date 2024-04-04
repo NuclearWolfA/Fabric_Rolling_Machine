@@ -1,0 +1,68 @@
+Protel Design System Design Rule Check
+PCB File : D:\Fabric_Rolling_Machine\PCB\PCB_1\PCB1.PcbDoc
+Date     : 4/4/2024
+Time     : 2:22:36 PM
+
+Processing Rule : Clearance Constraint (Gap=8mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=7mil) (Max=1000mil) (Preferred=8mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (InPadClass('PowerPads'))
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=11.811mil) (Conductor Width=8mil) (Air Gap=8mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=3mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=11.811mil) (Max=248.031mil) (All)
+   Violation between Hole Size Constraint: (10mil < 11.811mil) Via (1005mil,1285mil) from Top Layer to Bottom Layer Actual Hole Size = 10mil
+   Violation between Hole Size Constraint: (10mil < 11.811mil) Via (1010.874mil,1500mil) from Top Layer to Bottom Layer Actual Hole Size = 10mil
+   Violation between Hole Size Constraint: (10mil < 11.811mil) Via (555mil,55mil) from Top Layer to Bottom Layer Actual Hole Size = 10mil
+   Violation between Hole Size Constraint: (10mil < 11.811mil) Via (605mil,1755mil) from Top Layer to Bottom Layer Actual Hole Size = 10mil
+   Violation between Hole Size Constraint: (10mil < 11.811mil) Via (653.865mil,1286.135mil) from Top Layer to Bottom Layer Actual Hole Size = 10mil
+   Violation between Hole Size Constraint: (7mil < 11.811mil) Via (795.5mil,862.5mil) from Top Layer to Bottom Layer Actual Hole Size = 7mil
+   Violation between Hole Size Constraint: (10mil < 11.811mil) Via (923.483mil,1491.717mil) from Top Layer to Bottom Layer Actual Hole Size = 10mil
+Rule Violations :7
+
+Processing Rule : Hole To Hole Clearance (Gap=9.842mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=5mil) (IsPad),(All)
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 5mil) Between Pad R1-1(1450mil,1458.15mil) on Multi-Layer And Text "R4" (1401mil,1375mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 5mil) Between Pad R2-1(1636.529mil,1456.496mil) on Multi-Layer And Text "R5" (1587mil,1375mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 5mil) Between Pad R3-1(1806.606mil,1456.496mil) on Multi-Layer And Text "R6" (1758mil,1375mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 5mil) Between Pad R4-1(1450mil,918.552mil) on Multi-Layer And Text "R7" (1401mil,830mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+Rule Violations :4
+
+Processing Rule : Silk to Silk (Clearance=0mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=71497.938mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 11
+Waived Violations : 0
+Time Elapsed        : 00:00:01
