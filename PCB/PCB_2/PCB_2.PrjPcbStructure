@@ -1,0 +1,3 @@
+Record=TopLevelDocument|FileName=master.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=master.SchDoc|FileName=power.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=master.SchDoc|FileName=slave.SchDoc|SheetNumber=3

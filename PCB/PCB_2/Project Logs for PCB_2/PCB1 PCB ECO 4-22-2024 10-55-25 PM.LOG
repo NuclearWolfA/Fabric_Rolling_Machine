@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=NetJ1_1 Pin=J4-1
+Removed Pin From Net: NetName=NetJ1_2 Pin=J4-2
+Removed Member From Class: ClassName=slave Member=J4
+Added Room: Name=master
+Added Room: Name=slave

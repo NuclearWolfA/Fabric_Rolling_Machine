@@ -1,0 +1,39 @@
+Change Component Footprint: Designator=J? Old Footprint=FP-470531000-MFG New Footprint=FP-470531000-MFG
+Change Component Designator: OldDesignator=C? NewDesignator=C1
+Change Component Designator: OldDesignator=C? NewDesignator=C2
+Change Component Designator: OldDesignator=C? NewDesignator=C3
+Change Component Designator: OldDesignator=C? NewDesignator=C4
+Change Component Designator: OldDesignator=C? NewDesignator=C5
+Change Component Designator: OldDesignator=J? NewDesignator=J1
+Change Component Designator: OldDesignator=J? NewDesignator=J2
+Change Component Designator: OldDesignator=J? NewDesignator=J3
+Change Component Designator: OldDesignator=R? NewDesignator=R1
+Change Component Designator: OldDesignator=Y? NewDesignator=Y1
+Change Net Name : Old Net Name=NetC?_1 New Net Name=NetC5_1
+Change Net Name : Old Net Name=NetJ?_1 New Net Name=NetJ1_1
+Change Net Name : Old Net Name=NetJ?_2 New Net Name=NetJ2_2
+Change Net Name : Old Net Name=NetJ?_3 New Net Name=NetJ3_3
+Change Net Name : Old Net Name=NetJ?_4 New Net Name=NetJ3_4
+Added Pin To Net: NetName=NetC4_1 Pin=C4-1
+Added Pin To Net: NetName=NetC4_1 Pin=U1-7
+Added Pin To Net: NetName=NetC4_1 Pin=Y1-2
+Added Net: Name=NetC4_1
+Added Pin To Net: NetName=NetJ1_2 Pin=J1-2
+Added Pin To Net: NetName=NetJ1_2 Pin=U1-27
+Added Net: Name=NetJ1_2
+Added Pin To Net: NetName=NetJ2_1 Pin=J2-1
+Added Pin To Net: NetName=NetJ2_1 Pin=U1-31
+Added Net: Name=NetJ2_1
+Added Pin To Net: NetName=NetJ3_1 Pin=J3-1
+Added Pin To Net: NetName=NetJ3_1 Pin=U1-17
+Added Net: Name=NetJ3_1
+Added Pin To Net: NetName=NetJ3_2 Pin=J3-2
+Added Pin To Net: NetName=NetJ3_2 Pin=U1-16
+Added Net: Name=NetJ3_2
+Added Member To Class: ClassName=master Member=Component C1 C1206C224J5RACTU
+Added Member To Class: ClassName=master Member=Component C3 C1206C224J5RACTU
+Added Member To Class: ClassName=master Member=Component C4 22pf
+Added Member To Class: ClassName=master Member=Component C5 22pf
+Added Member To Class: ClassName=master Member=Component J2 1-TX 2-RX
+Added Member To Class: ClassName=master Member=Component J3 47053-1000
+Added Room: Name=master

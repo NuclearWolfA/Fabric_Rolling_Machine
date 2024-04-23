@@ -1,0 +1,35 @@
+Removed Pin From Net: NetName=NetJ2_1 Pin=J5-1
+Removed Pin From Net: NetName=NetJ2_2 Pin=J5-2
+Removed Pin From Net: NetName=NetJ3_1 Pin=J6-1
+Removed Pin From Net: NetName=NetJ3_2 Pin=J6-2
+Removed Pin From Net: NetName=NetJ3_3 Pin=J6-3
+Removed Pin From Net: NetName=NetJ3_4 Pin=J6-4
+Removed Pin From Net: NetName=NetJ3_4 Pin=R2-1
+Removed Pin From Net: NetName=NetJ3_3 Pin=U2-15
+Removed Pin From Net: NetName=NetJ3_2 Pin=U2-16
+Removed Pin From Net: NetName=NetJ3_1 Pin=U2-17
+Removed Pin From Net: NetName=NetJ3_4 Pin=U2-29
+Removed Pin From Net: NetName=NetJ2_2 Pin=U2-30
+Removed Pin From Net: NetName=NetJ2_1 Pin=U2-31
+Change Component Footprint: Designator=J6 Old Footprint=FP-470531000-MFG New Footprint=FP-470531000-MFG
+Added Pin To Net: NetName=NetJ5_1 Pin=J5-1
+Added Pin To Net: NetName=NetJ5_1 Pin=U2-31
+Added Net: Name=NetJ5_1
+Added Pin To Net: NetName=NetJ5_2 Pin=J5-2
+Added Pin To Net: NetName=NetJ5_2 Pin=U2-30
+Added Net: Name=NetJ5_2
+Added Pin To Net: NetName=NetJ6_1 Pin=J6-1
+Added Pin To Net: NetName=NetJ6_1 Pin=U2-17
+Added Net: Name=NetJ6_1
+Added Pin To Net: NetName=NetJ6_2 Pin=J6-2
+Added Pin To Net: NetName=NetJ6_2 Pin=U2-16
+Added Net: Name=NetJ6_2
+Added Pin To Net: NetName=NetJ6_3 Pin=J6-3
+Added Pin To Net: NetName=NetJ6_3 Pin=U2-15
+Added Net: Name=NetJ6_3
+Added Pin To Net: NetName=NetJ6_4 Pin=J6-4
+Added Pin To Net: NetName=NetJ6_4 Pin=R2-1
+Added Pin To Net: NetName=NetJ6_4 Pin=U2-29
+Added Net: Name=NetJ6_4
+Added Room: Name=master
+Added Room: Name=slave
