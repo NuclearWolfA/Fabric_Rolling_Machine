@@ -1,15 +1,15 @@
-#define dirPin1 2
-#define stepPin1 3
+#define dirPin1 4
+#define stepPin1 5
 #define stepsPerRevolution1 200
 
-#define dirPin2 5
-#define stepPin2 4
+#define dirPin2 6
+#define stepPin2 7
 #define stepsPerRevolution2 200
 
 unsigned long previousMicros1 = 0;
 unsigned long previousMicros2 = 0;
 int del1 = 500; // Microseconds for motor 1
-int del2 = 1000; // Microseconds for motor 2
+int del2 = 500; // Microseconds for motor 2
 
 void setup() {
   pinMode(stepPin1, OUTPUT);
@@ -17,9 +17,9 @@ void setup() {
 
   pinMode(stepPin2, OUTPUT);
   pinMode(dirPin2, OUTPUT);
-  /*pinMode(A0,OUTPUT);
-  pinMode(A1,INPUT);
-  analogWrite(A0,200);*/ // test commmunication
+
+  digitalWrite(dirPin1,HIGH);
+  digitalWrite(dirPin2,HIGH);
 }
 
 void loop() {
