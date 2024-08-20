@@ -192,7 +192,14 @@ void loop() {
         _delay_ms(100); // Adjust delay as needed based on your application
     }
 }
-
+int main(){
+    setup();
+    while (1)
+    {
+        loop();
+    }
+    return 0;
+}
 void handleEncoder() {
     // Read the state of both encoder pins
     bool A = (PIND & (1 << encoderPinA)) >> encoderPinA;
