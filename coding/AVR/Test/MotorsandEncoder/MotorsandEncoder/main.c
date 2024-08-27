@@ -28,6 +28,8 @@ unsigned long previousMicros1 = 0;
 unsigned long previousMicros2 = 0;
 int del1 = 1000;  // Microseconds for motor 1
 int del2 = 1600;  // Microseconds for motor 2
+char received_fabric = '\0';
+int received_length = 0;
 
 void UART_Init(void);
 void UART_TxChar(char ch);
@@ -52,7 +54,7 @@ void setup() {
 	DDRD |= (1 << dirPin1) | (1 << stepPin1) | (1 << dirPin2) | (1 << stepPin2);
 
 	// Set initial direction of motors
-	PORTD |= (1 << dirPin1);  // Set dirPin1 HIGH
+	PORTD &= ~(1 << dirPin1);  // Set dirPin1 HIGH
 	PORTD |= (1 << dirPin2);  // Set dirPin2 HIGH
 
 	// Enable external interrupt INT0 on rising edge
@@ -63,26 +65,31 @@ void setup() {
 }
 
 void loop() {
-	char received_fabric = '\0';
-	int received_length = 0;
-	master_count = 0;
+	
 
 	if (USART_Available()) {
 		// Receive fabric type
 		received_fabric = USART_Receive();
-
+		char a = USART_Receive();
 		// Skip the space character (if you include it in the transmission)
-		if (USART_Receive() == ' ') {
+		while (a != ' ') {
+			a = USART_Receive();
+			};
 			// Receive the length
 			received_length = USART_ReceiveNumber();
-		}
+		master_count=0;
 	}
 
 	// Rotate motors while the absolute value of master_count is less than received_length * 100
-	while (abs(master_count) < received_length * 100) {
+	while (abs(master_count) < (received_length * 52 - 41)) { // value got from calibration
 		rotateMotors();
 	}
-	UART_TxChar("A");
+	if(received_length !=0){
+	UART_TxChar('A');
+	UART_TxChar('\n');
+	received_length=0;
+	master_count=0;
+	}
 }
 
 ISR(INT0_vect) {
@@ -254,3 +261,5 @@ void rotateMotors(void) {
 		}
 	}
 }
+
+

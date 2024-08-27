@@ -5,7 +5,6 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include <stdlib.h>
 
 #define RS PB4    // rs = 12 -> PB4
 #define EN PB3    // en = 11 -> PB3
@@ -18,23 +17,15 @@ char fabric;
 bool selected;
 
 char hexaKeys[ROWS][COLS] = {
-	{'D', '#', '0', '*'},
-	{'C', '9', '8', '7'},
-	{'B', '6', '5', '4'},
-	{'A','3','2','1'}
-
+	{'1', '2', '3', 'A'},
+	{'4', '5', '6', 'B'},
+	{'7', '8', '9', 'C'},
+	{'*', '0', '#', 'D'}
 };
 
 // Connections to AVR (Assume)
 // Rows: PC0, PC1, PD6, PD7
 // Columns: PC2, PC3, PB2, PB0
-
-void UART_Init(void);
-void UART_TxChar(char ch);
-unsigned char USART_Receive(void);
-unsigned char USART_Available(void);
-void UART_TxNumber(int number);
-int USART_ReceiveNumber(void);
 
 void KPsetup() {
 	// Set rows as output (PC0, PC1, PD6, PD7)
@@ -155,9 +146,6 @@ int main(void)
 	DDRB |= (1<<DDB3)|(1<<DDB4);
 	DDRB |= (1 << DDB1);
 
-	// Initialize UART
-	UART_Init();
-
 	// Set Timer1 to Fast PWM mode, 8-bit
 	TCCR1A |= (1 << WGM10);   // Fast PWM, 8-bit (WGM10 set to 1)
 	TCCR1A |= (1 << COM1A1);  // Clear OC1A on Compare Match, set at BOTTOM (non-inverting mode)
@@ -171,7 +159,7 @@ int main(void)
 	lcd_init();
 
 	lcd_cmd(0x80);           // Set cursor to the first line
-	lcd_string((const unsigned char *)"  PrecisionRoll   ", 17);  // Print string on the LCD
+	lcd_string((const unsigned char *)"  PrecisionRoll   ",17);  // Print string on the LCD
 	_delay_ms(2000);         // Delay for 2 seconds
 	lcd_cmd(0x01);           // Clear display
 	_delay_ms(2);            // Clear display requires a delay
@@ -187,7 +175,6 @@ int main(void)
 		lcd_cmd(0xC0);
 		lcd_string((const unsigned char *)"C:Linen  D:Other", 17);
 
-		// Fabric selection loop
 		while (1) {
 			char key = scanKeypad();
 			if (key != '\0') {
@@ -205,7 +192,6 @@ int main(void)
 		lcd_cmd(0xC0);
 		lcd_string((const unsigned char *)"Length: ", 8);
 
-		// Length input loop
 		while (1) {
 			char lenkey = scanKeypad();
 			if (lenkey != '\0') {
@@ -225,29 +211,16 @@ int main(void)
 			_delay_ms(200);
 		}
 
-		// Transmission after both fabric and length are finalized
-		UART_TxChar(fabric);               // Transmit the fabric type
-		UART_TxChar(' ');                  // Transmit a space as a separator
-		int length_value = atoi(length);   // Convert length string to integer
-		UART_TxNumber(length_value);       // Transmit the length as an integer
-		UART_TxChar('\n');                 // Transmit a newline for separation
-
 		lcd_cmd(0x01);
 		_delay_ms(2);
 
 		lcd_cmd(0x80);
 		lcd_string((const unsigned char *)"   Rolling...  ", 15);
+		_delay_ms(10000);
 		
-		bool finished = false;
 		
-		while(!finished){
-			char garbage='B';
-			if(USART_Available()){
-				garbage = USART_Receive();
-				if(garbage=='A'){
-					finished= true; }
-				}
-		}
+		
+		//Code for serial communication
 
 		lcd_cmd(0x01);
 		_delay_ms(2);
@@ -257,85 +230,4 @@ int main(void)
 		_delay_ms(2);
 	}
 }
-
-
-void UART_Init(void)
-{
-	// Set the baud rate (assuming 16 MHz clock and desired baud rate of 9600)
-	UBRR0 = 103;
-
-	// Enable the transmitter and receiver
-	UCSR0B &= ~(1 << UCSZ02);  // Corrected bit clearing
-	UCSR0B |= (1 << RXEN0) | (1 << TXEN0);
-
-	// Set the data format to 8 data bits, no parity, 1 stop bit
-	UCSR0C &= ~((1 << UMSEL00) | (1 << UMSEL01) | (1 << UPM00) | (1 << UPM01) | (1 << USBS0));
-	UCSR0C |= (1 << UCSZ00) | (1 << UCSZ01);
-	
-	UCSR0A &= ~(1 << U2X0);
-}
-
-unsigned char USART_Receive(void)
-{
-	// Wait for data to be received
-	while (!(UCSR0A & (1 << RXC0)));
-
-	// Return the received data from the buffer
-	return UDR0;
-}
-
-void UART_TxChar(char ch)
-{
-	// Wait for the transmit buffer to be empty
-	while (!(UCSR0A & (1 << UDRE0)));
-
-	// Put the data into the buffer, sending the data
-	UDR0 = ch;
-}
-
-unsigned char USART_Available(void)
-{
-	return (UCSR0A & (1 << RXC0));  // Return non-zero if data is available
-}
-
-void UART_TxNumber(int number) {
-	char buffer[7]; // Enough to hold the string representation of the number
-	itoa(number, buffer, 10); // Convert the integer to a string in base 10
-
-	// Transmit each character in the string
-	for (int i = 0; buffer[i] != '\0'; i++) {
-		UART_TxChar(buffer[i]);
-	}
-	
-	// Optionally, send a delimiter like newline or space to mark the end of the number
-	UART_TxChar('\n'); // Sends a newline character
-}
-
-int USART_ReceiveNumber(void) {
-	char buffer[12]; // Buffer to store the received string
-	int i = 0;
-	char received_char;
-	
-	// Receive characters until the delimiter is found
-	while (1) {
-		received_char = USART_Receive();
-		
-		if (received_char == '\n' || received_char == '\r') {
-			// Delimiter found, end of number
-			buffer[i] = '\0'; // Null-terminate the string
-			break;
-			} else {
-			// Store the received character, with overflow protection
-			if (i < sizeof(buffer) - 1) {
-				buffer[i] = received_char;
-				i++;
-			}
-		}
-	}
-	
-	// Convert the received string back to an integer
-	return atoi(buffer); // Converts the string to an integer
-}
-
-
 
